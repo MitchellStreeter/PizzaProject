@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mitchell's Pizza Order</title>
+    <style>
+        /* Add CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .menu-item {
+            width: 200px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .menu-item img {
+            width: 100%;
+            height: auto;
+        }
+        .menu-item h2 {
+            margin-top: 10px;
+        }
+        .menu-item p {
+            margin-top: 5px;
+        }
+        .cart {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .cart h2 {
+            margin-top: 0;
+        }
+        .cart ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .cart li {
+            margin-bottom: 5px;
+        }
+        .cart-total {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mitchell's Pizza Order</h1>
+
+        <div class="menu">
+            <!-- Add pizza menu items here -->
+            <div class="menu-item">
+                <img src="pizza_1.jpg" alt="Pizza 1">
+                <h2>Pizza 1</h2>
+                <p>$10</p>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Repeat the above div for each pizza menu item -->
+        </div>
+
+        <div class="cart">
+            <h2>Cart</h2>
+            <ul>
+                <!-- Add cart items here -->
+                <li>Pizza 1 x 1 - $10</li>
+                <!-- Repeat the above li for each cart item -->
+            </ul>
+            <p class="cart-total">Total: $10</p>
+            <button>Place Order</button>
+        </div>
+    </div>
+</body>
+</html>

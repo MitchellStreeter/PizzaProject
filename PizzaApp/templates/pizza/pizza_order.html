@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pizza Order</title>
+</head>
+<body>
+    <h1>Welcome to the Pizza Order Page!</h1>
+    <p>Name: {{ name }}</p>
+    <p>Description: {{ description }}</p>
+
+    <h2>Order Pizza</h2>
+    <form method="post">
+        {% csrf_token %}
+        <!-- Add pizza selection options and topping choices here -->
+        <!-- Example: -->
+        <label for="pizza">Select a pizza:</label>
+        <select id="pizza" name="pizza">
+            {% for pizza in pizzas %}
+                <option value="{{ pizza.id }}">{{ pizza.name }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="toppings">Select toppings:</label>
+        <select id="toppings" name="toppings" multiple>
+            {% for topping in toppings %}
+                <option value="{{ topping.id }}">{{ topping.name }}</option>
+            {% endfor %}
+        </select>
+
+        <!-- Add more fields as needed -->
+
+        <input type="submit" value="Order Pizza">
+    </form>
+</body>
+</html>
